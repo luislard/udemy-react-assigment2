@@ -23,10 +23,8 @@ class App extends Component {
     let chars = null;
 
     if (this.state.text.length > 0) {
-      let textArray = [];
-      for (let index = 0; index < this.state.text.length; index++) {
-        textArray[index] = this.state.text.charAt(index);
-      }
+      let textArray = this.state.text.split('');
+      
       chars = (
         <div>
           {textArray.map((char, index) => {
